@@ -79,7 +79,7 @@
         
         <SidebarInset>
           <!-- page renderd -->
-          <div class="pr-4 pt-20 w-full">
+          <div class="pr-10 pt-20 w-full">
             <RouterView></RouterView>
           </div>
         </SidebarInset>

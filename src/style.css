@@ -118,3 +118,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer components {
+  .form-sub-header {
+    @apply font-black text-gray-400 ;
+  }
+}
