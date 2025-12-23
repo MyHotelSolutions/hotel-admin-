@@ -10,7 +10,12 @@ import Calender from "@/views/admin/calender.vue";
 import Unavailability from "@/views/admin/unavailability.vue";
 import Statistics from "@/views/admin/statistics.vue";
 import Rooms from "@/views/admin/rooms.vue";
-import Test from "@/views/test.vue";
+import test from "@/views/test.vue"
+import Paymentrecods from '@/views/admin/paymentrecods.vue'
+import Platform from '@/views/platform/platform.vue'
+import Adminuser from '@/views/platform/adminuser.vue'
+import Email from '@/views/platform/email.vue'
+import Sms from '@/views/platform/sms.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -46,6 +51,11 @@ const router = createRouter({
                 name : 'rooms',
                 component : Rooms
             },
+            {
+                path : '/paymentrecods',
+                name : 'paymentrecods',
+                component : Paymentrecods
+            },
         ]
     },
     {
@@ -77,9 +87,27 @@ const router = createRouter({
       ]
     },
     {
-        path : '/test',
-        name : 'test',
-        component : Test
+        path : '/platform',
+        name : 'platform',
+        component : Platform,
+        redirect : {name : 'adminusers'},
+        children : [
+            {
+                path : 'sms',
+                name : 'sms',
+                component : Sms
+            },
+            {
+                path : 'email',
+                name : 'email',
+                component : Email
+            },
+            {
+                path : 'adminusers',
+                name : 'adminusers',
+                component : Adminuser
+            },
+        ]
     }
   ],
 });

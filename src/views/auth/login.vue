@@ -86,6 +86,8 @@ const toastMessage = (type,title, des) => {
 const login = () => {
     if(user_email.value != email || user_password.value != password){
         toastMessage("error", "Sory", "your credenials are not match. try again or reset the password")
+    }else if(user_email.value == email && user_password.value == password){
+        router.push('/')
     }
 }
 
