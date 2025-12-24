@@ -16,6 +16,8 @@ import Platform from '@/views/platform/platform.vue'
 import Adminuser from '@/views/platform/adminuser.vue'
 import Email from '@/views/platform/email.vue'
 import Sms from '@/views/platform/sms.vue'
+import Test from '@/views/test.vue'
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -108,6 +110,11 @@ const router = createRouter({
                 component : Adminuser
             },
         ]
+    },
+    {
+        path : '/test',
+        name : 'test',
+        component : Test
     }
   ],
 });
